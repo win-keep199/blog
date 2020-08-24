@@ -282,7 +282,6 @@
     {### POST BODY ###}
     {#################}
     <div class="post-body{% if theme.han %} han-init-context{% endif %}{% if post.direction && post.direction.toLowerCase() === 'rtl' %} rtl{% endif %}" itemprop="articleBody">
-
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -353,19 +352,20 @@
         {{ post.content }}
       {% endif  %}
     </div>
-       <!-- 相关文章推荐 -->
-            {% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
-                 {% include 'post-related.swig' with { post: post } %}
-            {% endif %}
+    {% if not is_index %}
+        {% include 'sponsor.swig' %}
+      {% endif %}
     {#####################}
     {### END POST BODY ###}
     {#####################}
 
-{% if config.post_end_tag.enabled and not is_index %}
-   <div>
-    {% include 'post-end-tag.swig' %}
-   </div>
- {% endif %}
+    <div>
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+    </div>
+
+
     {% if theme.wechat_subscriber.enabled and not is_index %}
 
       <div>
@@ -463,6 +463,7 @@
       {% endif %}
     </footer>
   </div>
+
 
   {######################}
   {### END POST BLOCK ###}

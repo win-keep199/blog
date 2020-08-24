@@ -62,7 +62,7 @@
         overflow: hidden;
         height: 169px !important;
         border-right: 0px solid #bcbcbc;
-        background:url('https://s2.ax1x.com/2019/09/07/nlL4pR.jpg');
+        background:url('https://s2.ax1x.com/2019/09/07/nlL4pR.jpg');/*背景图片*/
     }
     .box{
     	visibility: visible;

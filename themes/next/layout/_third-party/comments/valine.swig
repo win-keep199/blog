@@ -1,7 +1,53 @@
 {% if theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
+  <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script type="text/javascript" src="/js/src/Valine.min.js"></script>
+  <!-- 评论框美化 -->
+  <style type="text/css">
+      #veditor {
+        background-image: url({{theme.valine.background}});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255, 255, 255, 0);
+        resize: vertical
+      }
+      #veditor:focus{
+        background-position-y: 200px;
+        transition: all 0.2s ease-in-out 0s;
+      }
 
+      /*鼠标放置头像旋转*/
+      img.vimg {
+          transition: all 1s   /* 旋转时间为 1s */
+      }
+
+      img.vimg:hover {
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+      }
+
+      #comments .vcards .vcard {
+        padding: 15px 20px 0 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+        transition: all .3s
+      }
+
+      #comments .vcards .vcard:hover {
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+      }
+
+      #comments .vcards .vcard .vh .vcard {
+        border: none;
+        box-shadow: none;
+      }
+
+
+  </style>
   <!-- https://deserts.io/diy-a-comment-system/ -->
   <script type="text/javascript">
     new Valine({
@@ -10,30 +56,21 @@
         el: '#comments' ,
         appId: '{{ theme.valine.appid }}',
         appKey: '{{ theme.valine.appkey }}',
-        emoticon_url: 'https://cloud.panjunwen.com/alu',
-        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
-        placeholder: '{{ theme.valine.placeholder }}',
+        placeholder: "你是我一生只会遇见一次的惊喜 ...",
+        master: '1594eadfd88c23c436e1d293db4b442c',   //博主邮箱md5
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends:  ["089932bfa601a5061a13f41e49075495"],  //小伙伴邮箱Md5
+        enableQQ: true,
   });
+  </script>
 
-  </script>
-  <script>
-      if(window.location.hash){
-          var checkExist = setInterval(function() {
-             if ($(window.location.hash).length) {
-                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
-                clearInterval(checkExist);
-             }
-          }, 100);
-      }
-  </script>
-{% endif %}
-<script>
-    if(window.location.hash){
-        var checkExist = setInterval(function() {
-           if ($(window.location.hash).length) {
-              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
-              clearInterval(checkExist);
-           }
-        }, 100);
-    }
+<!-- 今日诗词：随机返回一句古诗词名句的接口，宅到用来做 Valine 的 placeholder 显示内容 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author;
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+    })
 </script>
+
+{% endif %}

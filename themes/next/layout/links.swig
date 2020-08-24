@@ -20,6 +20,13 @@
                 clear: both;
             }
 
+            .card:nth-child(odd) {
+                float: left;
+            }
+            .card:nth-child(even) {
+                float: right;
+            }
+
             .card {
                 width: 300px;
                 font-size: 1rem;
@@ -28,12 +35,6 @@
                 transition-duration: 0.15s;
                 margin-bottom: 1rem;
                 display:flex;
-            }
-            .card:nth-child(odd) {
-                float: left;
-            }
-            .card:nth-child(even) {
-                float: right;
             }
             .card:hover {
                 transform: scale(1.1);
@@ -76,26 +77,24 @@
             }
         </style>
         <div class="links-content">
-            <div class="link-navigation">
-
-                {% for link in theme.mylinks %}
-
-                    <div class="card">
-                        <img class="ava" src="{{ link.avatar }}"/>
-                        <div class="card-header">
-                           <div>
-                              <a href="{{ link.site }}" target="_blank"> {{ link.nickname }}</a>
-                              <a href="{{ link.site }}" target="_blank"><span class="focus-links">关注</span></a>
-                           </div>
-                           <div class="info">{{ link.info }}</div>
-                        </div>
-                    </div>
-
-                {% endfor %}
-
-            </div>
+            {% for link in theme.mylinks %}
+                <div class="{{link.color}}"><i class="{{link.img}}" aria-hidden="true"></i> {{link.introduce}}</div>
+                <div class="link-navigation">
+                    {% for body in link.body %}
+                            <div class="card" id="cardmain">
+                                <img class="ava" src="{{ body.avatar }}"/>
+                                <div class="card-header">
+                                    <div>
+                                        <a href="{{ body.site }}" target="_blank"> {{ body.nickname }}</a>
+                                        <a href="{{ body.site }}" target="_blank"><span class="focus-links">关注</span></a>
+                                    </div>
+                                    <div div class="info">{{ body.info }}</div>
+                                </div>
+                            </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
             {{ page.content }}
-            </div>
         </div>
 
   {##########################}

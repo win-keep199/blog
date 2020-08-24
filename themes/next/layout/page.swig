@@ -8,9 +8,15 @@
     #}{{ __('title.category') + page_title_suffix }}{#
   #}{% elif page.type === "tags" and not page.title %}{#
     #}{{ __('title.tag') + page_title_suffix }}{#
+
     <!-- 友情链接-->
     #}{% elif page.type === 'links' and not page.title %}{#
       #}{{ __('title.links') + page_title_suffix }}{#
+
+        <!-- 小工具-->
+    #}{% elif page.type === 'tools' and not page.title %}{#
+      #}{{ __('title.tools') + page_title_suffix }}{#   
+
   #}{% else %}{#
     #}{{ page.title + page_title_suffix }}{#
   #}{% endif %}{#
@@ -40,6 +46,8 @@
               {{ tagcloud({min_font: 12, max_font: 30, amount: 300, color: true, start_color: '#ccc', end_color: '#111'}) }}
             </div>
           </div>
+          {% include 'tag-bubble.swig' %}
+          
         {% elif page.type === 'categories' %}
           <div class="category-all-page">
             <div class="category-all-title">
@@ -49,10 +57,16 @@
               {{ list_categories() }}
             </div>
           </div>
+          {# 爱心分类页 #}
+          {% include 'category-love.swig' %}
 
           <!-- 友情链接-->
           {% elif page.type === 'links' %}
               {% include 'links.swig' %}
+
+          <!-- 小工具-->
+          {% elif page.type === 'tools' %}
+              {% include 'tools.swig' %}
 
         {% else %}
           {{ page.content }}
