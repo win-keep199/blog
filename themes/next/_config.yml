@@ -54,7 +54,7 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
@@ -539,7 +539,7 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: false
-  app_id: #<app_id>
+  app_id:  #<app_id>
   app_key: #<app_key>
 
 # Another tool to show number of visitors to each article.
@@ -685,7 +685,7 @@ fancybox: true
 # Tidio online chat
 # see: https://www.tidiochat.com
 tidio:
-  enable: true
+  enable: false
   key: hi7gxxhf8xk3f3gpfu2hmp8jau6vjccp
 
 # Progress bar in the top during page loading.
@@ -706,7 +706,7 @@ pace: true
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-loading-bar
+pace_theme: pace-theme-minimal
 
 # Canvas-nest
 canvas_nest: true
@@ -848,7 +848,7 @@ carousel:
 # Live2D
 # 看板娘
 live2d:
-  enable: true
+  enable: false
 
 # 友链
 mylinks:

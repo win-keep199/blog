@@ -11,7 +11,9 @@
   <script data-no-instant>InstantClick.init();</script>
   <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media="all">
   <script type="text/javascript" src="/js/src/dytitle.js"></script>
-  <script src="/live2d-widget/autoload.js"></script>
+  {% if theme.live2d.enable %}
+    <script src="/live2d-widget/autoload.js"></script>
+  {% endif %}
   <script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
   <!-- 球型气泡标签云 -->
   <script type="text/javascript" src="/js/src/bubble.js"></script>
@@ -21,7 +23,6 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}

@@ -379,39 +379,8 @@ color: #fff;
   /*background: url(../images/scrollbar_arrow.png) no-repeat 0 0;*/  /*可以添加滚动条样式*/
 }
 
-.post-body ol{
-  list-style: none;  /* 隐藏原来的 1. 2. 等序号样式 */
-  counter-reset: ol-li;
-}
-.post-body ol li:before {
-    display: block;
-    float: left;
-    width: 19px;   /* 宽度和高度需要根据自己的字体大小进行修正 */
-    height: 19px;
-    line-height: 19px;
-    margin: 4px 12px 0 0;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 300;
-    font-style: normal;
-    background-color: #49b1f5;
-    border-radius: 50%;
-    text-align: center;
-    content: counter(ol-li);
-    counter-increment: ol-li;
-    transition: all .5s;
-}
-
-.post-body ol li:hover::before{
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-}
-
 /* 美化 hr 样式 */
-hr {
+.post-body hr {
     position: relative;
     margin: 2rem auto;
     width: calc(100% - 4px);
@@ -419,13 +388,13 @@ hr {
     background: #fff;
 }
 
-hr {
+.post-body hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible;
 }
 
-hr:before {
+.post-body hr:before {
     position: absolute;
     top: -10px;
     left: 5%;
@@ -441,6 +410,6 @@ hr:before {
     transition: all 1s ease-in-out;
 }
 
-hr:hover::before{
+.post-body hr:hover::before{
 	left: 95%;
 }

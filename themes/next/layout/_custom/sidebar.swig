@@ -1,9 +1,5 @@
 <!-- none-select-br -->
-
-<p></p>
-
 <!-- hitokoto -->
-
 <div class="hitokoto-title">
 	<i class="fa fa-paragraph"></i>
 	<b>一言</b>
@@ -11,7 +7,7 @@
 
 <div id="hitokoto">:D 获取中...</div>
 <i id="hitofrom">:D 获取中...</i>
-<p></p>
+<br>
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 <script>

@@ -5,6 +5,8 @@ description: Hello World!及本站功能测试
 copyright: true
 ---
 
+<script src="/live2d-widget/autoload.js"></script>
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -107,6 +109,99 @@ danger 提示块标签
 
 ------
 
+#### Folding容器
 
+{% tabs folding %}
+<!-- tab 语法格式 -->
+```bash
+{% folding 参数（可选）, 标题 %}
+
+![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/resume/resumeBg.jpg)
+
+{% endfolding %}
+```
+<!-- endtab -->
+<!-- tab 示例写法 -->
+```bash
+{% folding 查看图片测试 %}
+
+![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/resume/resumeBg.jpg)
+
+{% endfolding %}
+
+{% folding cyan open, 查看默认打开的折叠框 %}
+
+这是一个默认打开的折叠框。
+
+{% endfolding %}
+
+{% folding green, 查看代码测试 %}
+
+{% endfolding %}
+
+{% folding yellow, 查看列表测试 %}
+
+- haha
+- hehe
+
+{% endfolding %}
+
+{% folding red, 查看嵌套测试 %}
+
+{% folding blue, 查看嵌套测试2 %}
+
+{% folding 查看嵌套测试3 %}
+
+hahaha
+
+{% endfolding %}
+
+{% endfolding %}
+
+{% endfolding %}
+```
+<!-- endtab -->
+<!-- tab 示例效果 -->
+{% folding 查看图片测试 %}
+
+![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/resume/resumeBg.jpg)
+
+{% endfolding %}
+
+{% folding cyan open, 查看默认打开的折叠框 %}
+
+这是一个默认打开的折叠框。
+
+{% endfolding %}
+
+{% folding green, 查看代码测试 %}
+```bash
+查看代码测试
+```
+
+{% endfolding %}
+
+{% folding yellow, 查看列表测试 %}
+
+- haha
+- hehe
+
+{% endfolding %}
+
+{% folding red, 查看嵌套测试 %}
+
+{% folding blue, 查看嵌套测试2 %}
+
+{% folding 查看嵌套测试3 %}
+
+hahaha
+
+{% endfolding %}
+
+{% endfolding %}
+
+{% endfolding %}
+<!-- endtab -->
+{% endtabs %}
 
 

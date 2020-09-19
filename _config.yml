@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://w-k.xyz/
+url: https://w-k.xyz/
 root: /
 # permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -105,9 +105,10 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository: git@github.com:win-keep199/win-keep199.github.io.git
+  repo:
+    # coding: https://e.coding.net/acaciablog/acaciablog/acaciablog.git
+    github: git@github.com:win-keep199/win-keep199.github.io.git
   branch: master
-- type: baidu_url_submitter ## 添加这里内容即可
 
 search:
   path: search.xml
@@ -139,9 +140,9 @@ baidusitemap:
   path: baidusitemap.xml
 # 懒加载
 lazyload:
-  enable: false
+  enable: true
   onlypost: true
-  loadingImg: /images/loading.gif
+  loadingImg: /images/lazy.gif
 
   # hexo-admin authentification
 admin:
@@ -179,4 +180,4 @@ service_worker:
   staticFileGlobs:
   - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
   stripPrefix: public
-  verbose: true
+  verbose: false

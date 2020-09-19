@@ -102,12 +102,14 @@ layout: false
                             }
                         </style>
                         <h2>微语</h2>
-                        <script>
-                            var appID="MfSTEV6DI7iKIhtXuBsF7NaI-MdYXbMMI";
-                            var appKEY="3tQSTCos9iB8vjrrrUysfR6B";
-                        </script>
-                        <div class="fa"><div id="artitalk_main"></div>
                         <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+                        <div id="artitalk_main"></div>
+                        <script>
+                        new Artitalk({
+                            appId: 'MfSTEV6DI7iKIhtXuBsF7NaI-MdYXbMMI',
+                            appKey: '3tQSTCos9iB8vjrrrUysfR6B',
+                        })
+                        </script>
                         
                     </section>
                 </article>

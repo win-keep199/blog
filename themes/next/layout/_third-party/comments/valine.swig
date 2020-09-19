@@ -1,4 +1,5 @@
 {% if theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+
   <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   <script type="text/javascript" src="/js/src/Valine.min.js"></script>
   <!-- 评论框美化 -->
