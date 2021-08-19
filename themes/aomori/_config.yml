@@ -1,0 +1,20 @@
+version: 1629071614668
+language: cn
+aomori_widgets:
+  - toc
+  - category
+  - tag
+  - recent_posts
+  - archive
+import:
+  link:
+    - >-
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
+      media="all">
+    - >-
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    - >-
+      <script defer type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>

@@ -1,0 +1,181 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Acacia's Blog
+subtitle: ''
+description: ''
+keywords:
+author: Acacia
+language: en
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://win-keep199.github.io/
+root: /
+
+permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: aomori
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+- type: git
+  repository: git@github.com:win-keep199/blog.git
+  # repo:
+  #   # coding: https://e.coding.net/acaciablog/acaciablog/acaciablog.git
+  #   github: git@github.com:win-keep199/win-keep199.github.io.git
+  branch: master
+
+abbrlink:
+    alg: crc32   #算法： crc16(default) and crc32
+    rep: hex     #进制： dec(default) and hex
+
+# Amori
+
+aomori_logo_typed_animated: true
+
+aomori_menu:
+  Home: /
+  Archives: /archives
+
+
+# valine
+# https://valine.js.org
+# aomori_valine:
+#   enable: false
+#   appId: 5Fwkm7QuOYQrGs3z36M4h1ch-MdYXbMMI # leancloud application app id
+#   appKey: 0HK6J4yY8NM9zKlqg8imv1p5 # leancloud application app key
+#   placeholder: 评论一下吧
+#   enableQQ: true
+
+aomori_twikoo:
+  enable: true
+  envId: https://twikoo-4tuetg2jb-win-keep199.vercel.app/
+
+aomori_copyright: true
+
+spoiler:
+  style: blur # 或者box
+  color: black # 仅当 style 为 box 时起效
+  p: false # 没懂啥意思，不管它
+
+aomori_social:
+  -
+    icon: github
+    type: logo
+    url: https://github.com/win-keep199
+
+aomori_logo: /images/avatar.jpg
+
+aomori_favicon: 💾
+
+# 对外API
+restful:
+  # site 可配置为数组选择性生成某些属性
+  # site: ['title', 'subtitle', 'description', 'author', 'since', email', 'favicon', 'avatar']
+  site: true        # hexo.config mix theme.config
+  posts_size: 10    # 文章列表分页，0 表示不分页
+  posts_props:      # 文章列表项的需要生成的属性
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    excerpt: true
+    cover: true      # 封面图，取文章第一张图片
+    content: true
+    keywords: true
+    categories: true
+    tags: true
+  categories: true         # 分类数据
+  use_category_slug: false # Use slug for filename of category data
+  tags: true               # 标签数据
+  use_tag_slug: false      # Use slug for filename of tag data
+  post: true               # 文章数据
+  pages: true
