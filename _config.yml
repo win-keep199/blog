@@ -105,10 +105,10 @@ theme: aomori
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repository: git@github.com:win-keep199/blog.git
-  # repo:
-  #   # coding: https://e.coding.net/acaciablog/acaciablog/acaciablog.git
-  #   github: git@github.com:win-keep199/win-keep199.github.io.git
+  # repository: git@github.com:win-keep199/blog.git
+  repo:
+    # coding: https://e.coding.net/acaciablog/acaciablog/acaciablog.git
+    github: git@github.com:win-keep199/win-keep199.github.io.git
   branch: master
 
 abbrlink:
