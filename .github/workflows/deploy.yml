@@ -34,9 +34,9 @@ jobs:
           git config --global user.name "win-keep199"
           npm install hexo-cli -g
           npm install
+          sed -i '11s/./  escape: \/\^\\\\\(\[`\*\\\[\\\]\(\)#\$\+\\\-\.!_>\]\)\/,/g' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
+          sed -i '20s/./  em: \/\^\\\*\(\(\?:\\\*\\\*\|\[\\s\\S\]\)\+\?\)\\\*\(\?!\\\*\)\/,/g' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
           cat /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
-          sed -n '11s/./  escape: \/\^\\\\\(\[`\*\\\[\\\]\(\)#\$\+\\\-\.!_>\]\)\/,/gp' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
-          sed -n '20s/./  em: \/\^\\\*\(\(\?:\\\*\\\*\|\[\\s\\S\]\)\+\?\)\\\*\(\?!\\\*\)\/,/gp' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
           
       - name: Deploy
         run: |
