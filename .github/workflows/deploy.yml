@@ -35,6 +35,8 @@ jobs:
           npm install hexo-cli -g
           npm install
           cat /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
+          sed -n '11s/./  escape: \/\^\\\\\(\[`\*\\\[\\\]\(\)#\$\+\\\-\.!_>\]\)\/,/gp' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
+          sed -n '20s/./  em: \/\^\\\*\(\(\?:\\\*\\\*\|\[\\s\\S\]\)\+\?\)\\\*\(\?!\\\*\)\/,/gp' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
           
       - name: Deploy
         run: |
