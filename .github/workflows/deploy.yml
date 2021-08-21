@@ -36,7 +36,6 @@ jobs:
           npm install
           sed -i '11s/.*/  escape: \/\^\\\\\(\[`\*\\\[\\\]\(\)#\$\+\\\-\.!_>\]\)\/,/g' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
           sed -i '20s/.*/  em: \/\^\\\*\(\(\?:\\\*\\\*\|\[\\s\\S\]\)\+\?\)\\\*\(\?!\\\*\)\/,/g' /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
-          cat /home/runner/work/blog/blog/node_modules/kramed/lib/rules/inline.js
           sed -i '15s/.*/<script src="https:\/\/cdn\.mathjax\.org\/mathjax\/latest\/MathJax\.js\?config=TeX\-AMS\-MML_HTMLorMML"><\/script>/g' /home/runner/work/blog/blog/node_modules/hexo-renderer-mathjax/mathjax.html
 
       - name: Deploy
