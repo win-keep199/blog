@@ -661,6 +661,22 @@ img:not([src]):not([srcset]) {
                         margin: 0 3px 0 0;
                     }
                 }
+
+                .article-wordcount{
+                    align-items: center;
+                    border-left: 3px solid var(--color-light);
+                    display: flex;
+                    margin-left: 10px;
+                    padding-left: 8px;
+                }
+
+                .article-readtime{
+                    align-items: center;
+                    border-left: 3px solid var(--color-light);
+                    display: flex;
+                    margin-left: 10px;
+                    padding-left: 8px;
+                }
             }
 
             a {
@@ -827,6 +843,22 @@ img:not([src]):not([srcset]) {
                         margin: 0 3px 0 0;
                     }
                 }
+            }
+
+            .article-wordcount{
+                align-items: center;
+                border-left: 3px solid var(--color-light);
+                display: flex;
+                margin-right: 10px;
+                padding-left: 8px;
+            }
+
+            .article-readtime{
+                align-items: center;
+                border-left: 3px solid var(--color-light);
+                display: flex;
+                margin-right: 10px;
+                padding-left: 8px;
             }
             
             .article-busuanzi,

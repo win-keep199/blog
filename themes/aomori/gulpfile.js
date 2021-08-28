@@ -56,6 +56,7 @@ gulp.task('css', function () {
             'source/stylesheets/remark42.css',
             'source/stylesheets/post.css',
             'source/stylesheets/style.scss',
+            'source/stylesheets/custom.css',
         ])
         .pipe(
             plumber({

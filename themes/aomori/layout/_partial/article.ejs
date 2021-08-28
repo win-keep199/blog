@@ -47,6 +47,14 @@
             </div>
             <% } %>
 
+            <div class="article-wordcount">
+                <a><i class="fad fa-file-word"></i>  <%= wordcount(post.content) %> 字</a>
+            </div>
+        
+            <div class="article-readtime">
+                <a><i class="fad fa-clock"></i>  <%= min2read(post.content) %> 分钟</a>
+            </div>
+
             <% if (config.aomori_busuanzi){ %>
             <div class="article-busuanzi">
                 有 <span id="busuanzi_value_page_pv">N</span> 人看过
