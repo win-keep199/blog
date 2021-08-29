@@ -625,9 +625,11 @@ img:not([src]):not([srcset]) {
             
             .article-more-info {
                 display: flex;
+                flex-wrap: wrap;
 
                 .article-date {
                     align-items: center;
+                    margin-top: 2px;
                     border-left: 3px solid var(--color-light);
                     color: var(--color-white);
                     display: flex;
@@ -637,6 +639,7 @@ img:not([src]):not([srcset]) {
 
                 .article-category {
                     align-items: center;
+                    margin-top: 2px;
                     border-left: 3px solid var(--color-light);
                     display: flex;
                     margin-left: 10px;
@@ -645,6 +648,7 @@ img:not([src]):not([srcset]) {
 
                 .article-tag {
                     align-items: center;
+                    margin-top: 2px;
                     border-left: 3px solid var(--color-light);
                     display: flex;
                     margin-left: 10px;
@@ -664,6 +668,7 @@ img:not([src]):not([srcset]) {
 
                 .article-wordcount{
                     align-items: center;
+                    margin-top: 2px;
                     border-left: 3px solid var(--color-light);
                     display: flex;
                     margin-left: 10px;
@@ -672,6 +677,7 @@ img:not([src]):not([srcset]) {
 
                 .article-readtime{
                     align-items: center;
+                    margin-top: 2px;
                     border-left: 3px solid var(--color-light);
                     display: flex;
                     margin-left: 10px;
@@ -802,6 +808,7 @@ img:not([src]):not([srcset]) {
 
         .article-more-info {
             display: flex;
+            flex-wrap: wrap;
             margin-bottom: 30px;
             padding: 0 0 30px;
             position: relative;
@@ -812,6 +819,7 @@ img:not([src]):not([srcset]) {
 
             .article-date {
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 color: var(--color-white);
                 display: flex;
@@ -821,6 +829,7 @@ img:not([src]):not([srcset]) {
 
             .article-category {
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 display: flex;
                 margin-right: 10px;
@@ -829,6 +838,7 @@ img:not([src]):not([srcset]) {
 
             .article-tag {
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 display: flex;
                 margin-right: 10px;
@@ -847,6 +857,7 @@ img:not([src]):not([srcset]) {
 
             .article-wordcount{
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 display: flex;
                 margin-right: 10px;
@@ -855,6 +866,7 @@ img:not([src]):not([srcset]) {
 
             .article-readtime{
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 display: flex;
                 margin-right: 10px;
@@ -864,6 +876,7 @@ img:not([src]):not([srcset]) {
             .article-busuanzi,
             .article-counter {
                 align-items: center;
+                margin-top: 2px;
                 border-left: 3px solid var(--color-light);
                 color: var(--color-white);
                 display: flex;
