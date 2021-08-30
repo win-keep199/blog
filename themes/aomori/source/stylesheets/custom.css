@@ -35,16 +35,15 @@
  * 或控制水平滚动条的高度
  */
 ::-webkit-scrollbar {
-    width: 10px;  
-    height: 1px;
+    width: 5px;  
+    height: 2px;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #535353;
+    background: var(--color-light);
 }
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background   : #ededed;
+    background: #ededed;
 }
 
 /* 解决 mathjax 长公式超出页面范围 */

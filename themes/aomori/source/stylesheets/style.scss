@@ -619,6 +619,7 @@ img:not([src]):not([srcset]) {
 
         .article-footer {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-end;
             padding: 20px 0 0;
             // font-family: 'Oswald', sans-serif;
@@ -730,6 +731,7 @@ img:not([src]):not([srcset]) {
 
             .article-footer {
                 justify-content: start;
+                flex-wrap: wrap;
                 padding-left: 70px;
 
                 &-common {
