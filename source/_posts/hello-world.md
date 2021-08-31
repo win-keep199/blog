@@ -1,6 +1,6 @@
 ---
 title: 「推荐」本站用到的 hexo 插件
-abbrlink: 4a17b156
+abbrlink: a21b286b
 ---
 
 ### [悬浮注释 hint](https://github.com/etigerstudio/hexo-tag-hint)

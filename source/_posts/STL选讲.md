@@ -3,8 +3,8 @@ categories: C++
 tags: STL
 title: STL选讲
 description: C++ STL选讲  Standard Template Library
-abbrlink: a220
-cover: https://7.dusays.com/2021/05/23/d03421b945271.jpg
+abbrlink: 5df74a9a
+cover: 'https://7.dusays.com/2021/05/23/d03421b945271.jpg'
 sticky: 3
 copyright: true
 ---

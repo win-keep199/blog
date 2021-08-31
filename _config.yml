@@ -17,6 +17,7 @@ url: https://win-keep199.github.io/
 root: /
 
 permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
+
 # abbrlink config
 abbrlink:
   alg: crc32      #support crc16(default) and crc32
@@ -31,6 +32,7 @@ abbrlink:
   auto_title: false #enable auto title, it can auto fill the title by path
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+  
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
