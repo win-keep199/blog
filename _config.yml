@@ -135,6 +135,8 @@ aomori_logo_typed_animated: true
 aomori_menu:
   Home: /
   Archives: /archives
+  Photography: /photography
+  Friends: /friends
 
 
 # valine
